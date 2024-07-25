@@ -1,0 +1,214 @@
+/* Container for the form */
+.container {
+    width: 100%;
+    min-height: 100vh;
+    background: wheat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+/* Main form container */
+.inner_container {
+    margin-top: 100px;
+    margin-bottom: 100px;
+    width: 700px;
+    display: flex;
+    align-content: flex-start;
+    border-radius: 20px;
+    box-shadow: 0px 3px 3px -2px rgb(0 0 0 / 20%),
+        0px 3px 4px 0px rgb(0 0 0 / 14%), 0px 1px 8px 0px rgb(0 0 0 / 12%);
+    border: 2px   solid black ;
+    background-color: white; 
+}
+
+/* Right section styling */
+.form_right {
+    flex:1;
+    background-color: white;
+    padding: 20px; 
+    border-radius: 20px;
+}
+
+/* Form inner styling */
+.picnic_form_inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%; /* Ensure the form takes the full width */
+}
+
+.picnic_form_inner h1 {
+    font-size: 36px;
+    margin-top: 0;
+    color: #3b3f46; /* Dark color for the heading */
+}
+.input_field_img{
+margin-left: 10px;
+max-width: 200px;
+outline: none;
+border: 1px gray solid;
+width: 100%;
+min-width: 200px; 
+padding: 12px; /* Add padding inside the inputs */
+border-radius: 8px; /* Rounded corners */
+background-color: #f8f8f8; /* Light background color */
+margin: 10px 0;
+font-size: 14px;
+}
+.input_field {
+    outline: none;
+    border: 1px gray solid;
+    width: 100%;
+    min-width: 200px; /* Full width for inputs */
+    max-width: 370px; /* Limit the width of inputs */
+    padding: 12px; /* Add padding inside the inputs */
+    border-radius: 8px; /* Rounded corners */
+    background-color: #f8f8f8; /* Light background color */
+    margin: 10px 0;
+    font-size: 14px;
+}
+
+.Lable{
+ 
+    max-width: 370px;
+    font-size: 18px;
+    font-weight: 700px;
+    color: #333; /* Dark color for labels */
+    margin-bottom: 5px; /* Space between label and input */
+}
+
+.picnic_form_error_msg {
+    width: 100%;
+    max-width: 370px;
+    padding: 12px;
+    margin: 10px 0;
+    font-size: 14px;
+    background-color: #f34646;
+    color: white;
+    border-radius: 15px;
+    text-align: center;
+}
+.dropdown {
+    width: 100%;
+    max-width: 370px;
+    min-width: 200px; /* Adjust to fit your design */
+    padding: 10px 15px;
+    border-radius: 10px;
+    border: 2px solid #ccc;
+    background-color: #fff;
+    font-size: 14px;
+    color: #333;
+    cursor: pointer;
+    appearance: none; /* Remove default arrow */
+    position: relative;
+}
+
+/* Style the dropdown arrow */
+.dropdown::after {
+    content: '▼'; /* Arrow character */
+    font-size: 12px;
+    color: #333;
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    pointer-events: none; /* Prevent interference with dropdown interaction */
+}
+
+/* Style for the options inside the dropdown */
+.dropdown option {
+    background-color: #fff;
+    color: #333;
+    padding: 10px;
+}
+
+/* Focus state */
+.dropdown:focus {
+    border-color: #3b3f46;
+    outline: none; /* Remove default outline */
+}
+
+/* Option hover state */
+.dropdown option:hover {
+    background-color: #f0f0f0;
+}
+
+/* Additional styling for better visibility */
+.dropdown-container {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-options {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+    display: none; /* Hidden by default */
+    z-index: 1000; /* Ensure dropdown appears above other elements */
+}
+
+.dropdown-container:hover .dropdown-options {
+    display: block;
+}
+
+.dropdown-options .option {
+    padding: 10px 15px;
+    cursor: pointer;
+    color: #333;
+}
+
+.dropdown-options .option:hover {
+    background-color: #f0f0f0;
+}
+
+.picnic_form_white_btn,
+.black_btn {
+    border: none;
+    outline: none;
+    padding: 12px 0;
+    background-color: white;
+    border-radius: 20px;
+    width: 180px;
+    font-weight: bold;
+    font-size: 14px;
+    cursor: pointer;
+    margin: 5px;
+}
+
+.black_btn {
+    background-color: #3b3f46;
+    color: white;
+}
+.rating_container {
+    margin-top: 20px;
+}
+
+.rating_stars {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.star {
+    font-size: 30px;
+    cursor: pointer;
+    color: #ccc; /* Default color for stars */
+    transition: color 0.3s;
+    margin: 0 5px;
+}
+
+.star.filled {
+    color: #f5b301; /* Color for filled stars */
+}
+
+.star:hover,
+.star:hover ~ .star {
+    color: #f5b301; /* Color for stars on hover */
+}
