@@ -6,6 +6,7 @@ const connection = require("./db");
 const userRoutes = require('./routes/users');
 const authRoutes = require('./routes/auth');
 const locationRoutes = require('./routes/addLocation');
+const profileRoutes = require('./routes/profile')
 
 const app = express();
 
@@ -21,7 +22,8 @@ app.use('/uploads', express.static(path.join(__dirname, 'uploads')));
 // Routes
 app.use('/api/users', userRoutes);
 app.use('/api/auth', authRoutes);
-app.use('/api/addlocation', locationRoutes); // Ensure this route is correct
+app.use('/api/addlocation', locationRoutes);
+app.use('/api/users/me' ,profileRoutes) // Ensure this route is correct
 
 const port = process.env.PORT || 8080;
 app.listen(port, () => console.log(`Listening on port ${port}...`));
