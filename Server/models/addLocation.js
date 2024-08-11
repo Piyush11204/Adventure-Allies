@@ -4,10 +4,10 @@ const locationSchema = new mongoose.Schema({
     name: { type: String, required: true },
     locationType: { type: String, required: true },
     station: { type: String, required: true },
-    image: { type: String }, // You may store the image URL or path
+    image: { type: String }, 
     description: { type: String, required: true },
     additionalDetails: { type: String },
-    rating: { type: Number, min: 1, max: 5, default: 0 } // Rating from 1 to 5
+    rating: { type: Number, min: 1, max: 5, default: 0 } 
 });
 
 const Location = mongoose.model('Location', locationSchema);
