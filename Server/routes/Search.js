@@ -10,7 +10,7 @@ router.get('/search', async (req, res) => {
         }
 
         // Search by name or description
-        const searchRegex = new RegExp(query, 'i'); // Case-insensitive search
+        const searchRegex = new RegExp(query, 'i'); 
         const results = await Location.find({
             $or: [
                 { name: searchRegex },
